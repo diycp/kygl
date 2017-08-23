@@ -1,0 +1,47 @@
+{include file="../application/kygl/view/Index/header.html" /}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2 sidebar" >
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">我的菜单</h3>
+                </div>
+
+                <div class="panel-body">
+                    {if $Think.session.usergroup == 1}
+                    {include file="../application/kygl/view/Index/menu2.html"}
+                    {else}
+                    {include file="../application/kygl/view/Index/menu.html"}
+                    {/if}
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col-sm-10 main">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">控制面板</h3>
+                </div>
+                <div class="panel-body">
+
+                    <p>　　欢迎使用旱区作物逆境生物学国家重点实验室科研管理系统！如果您在使用中遇到问题，请拨打以下联系电话咨询。</p>
+                    <p>　　项目咨询：029-87080062</p>
+                    <p>　　技术问题：029-87075858</p><br>
+                    <table class="table">
+                        <tr>
+                            <td>系统当前用户数：</td><td>65</td>
+                        </tr>
+                        <tr>
+                            <td>申报信息总条数：</td><td>302</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{include file="../application/kygl/view/Index/footer.html" /}

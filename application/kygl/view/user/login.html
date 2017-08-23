@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>科研管理系统-用户登录</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href='{$Think.const.__APP__}/static/bootstrap/css/bootstrap.min.css'rel='stylesheet'>
+
+    <!-- Custom styles for this template -->
+    <link href="{$Think.const.__APP__}/static/css/signin.css" rel="stylesheet">
+    <style type="text/css">
+
+.hang{
+   
+width:80px;
+height:20px;
+/*margin-left:0px;
+margin-top:1px;*/
+
+/*margin-right:-80px;
+margin-top:-35px;*/
+border:1px  black;
+
+}
+
+
+
+
+.container{
+  
+    /*display:inline;*/
+
+}
+
+.form-signin{
+
+
+}
+
+
+
+
+
+
+</style>
+   <script type="text/javascript">
+       
+
+
+
+       
+   </script>
+
+  
+</head>
+
+<body>
+
+<div class="container">
+    {if $Think.get.status eq 'error'}<div class="alert alert-danger" role="alert">用户名或密码错误，请重新输入！</div>{/if}
+    {if $Think.get.status eq 'logout'}<div class="alert alert-success" role="alert">您已经成功退出系统！</div>{/if}
+        <form class="form-signin" method="post" action="{:url('user/checkLogin')}">
+        <h3 class="form-signin-heading"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> 科研管理系统-用户登录</h3>
+        <label for="inputEmail" class="sr-only">用户名</label>
+        <input type="text" id="inputEmail" class="form-control" name="username" placeholder="请输入用户名" required autofocus>
+        <label for="inputPassword" class="sr-only">密码</label>
+        <input type="password" id="inputPassword" class="form-control" name="password" placeholder="请输入密码" required>
+        <!--隐藏域<input type="hidden" name="action" value="login" />-->
+        <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+      
+        <button target="_blank" class="hang"><font color="black" font size="2">点击注册</font></button>
+     
+        </form>
+                            
+
+                           
+                            
+                            
+
+    
+                           
+</div> <!-- /container -->
+
+
+</body>
+</html>

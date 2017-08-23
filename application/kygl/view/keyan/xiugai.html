@@ -1,0 +1,28 @@
+
+
+{include file="../application/kygl/view/index/header.html" /}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{foreach $search as $data}
+
+<a href="{:url('keyan/xiugaixm','xmid='.$data.id)}">{$data.title}</a></br>
+
+
+{/foreach}
+{include file="../application/kygl/view/index/footer.html" /}

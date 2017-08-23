@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>科研管理系统</title>
+
+    <link href="{$Think.const.__APP__}/static/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="{$Think.const.__APP__}/static/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="{$Think.const.__APP__}/static/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="{$Think.const.__APP__}/static/jquery/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="{$Think.const.__APP__}/static/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{$Think.const.__APP__}/static/bootstrap/js/bootstrap3-typeahead.min.js"></script>
+    <script type="text/javascript" src="{$Think.const.__APP__}/static/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+    <script type="text/javascript" src="{$Think.const.__APP__}/static/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+
+
+
+
+<!--新的bootstrap-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+<!--[if lte IE 9]>
+<div style="width:100%; height:50px; line-height:50px; background:#f00; text-align:center; color:#fff">您现在使用的浏览器版本过低，可能会导致部分图片和信息的缺失。请下载 <a href="http://down.360safe.com/se/360se_setup.exe" class="btn btn-success">360浏览器</a> 或 <a href="http://www.google.cn/chrome/" class="btn btn-success" target="_blank">谷歌浏览器</a></div> <![endif]-->
+
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">科研管理系统（旱区作物逆境生物学国家重点实验室）</a>
+        </div>
+        <div id="navbar" class="navbar-inner">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="{:url('index/index')}"><span class="glyphicon glyphicon-list-alt"></span> 系统首页</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> 个人信息</a></li>
+                <li><a href="#">用户名：<span class="label label-success">{$Think.session.username}</span> 用户组：<span class="label label-success">{if $Think.session.usergroup==1}管理员{elseif $Think.session.usergroup==2}科研人员{/if}</span></a></li>
+                <li><a href="{:url('user/logout')}"><span class="glyphicon glyphicon-off"></span> 退出登录</a></li>
+            </ul>
+
+        </div>
+    </div>
+</nav>

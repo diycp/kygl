@@ -1,0 +1,203 @@
+
+
+{include file="../application/kygl/view/index/header.html" /}
+
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+
+$("#xmlb").change(function(){
+
+var i=$("#xmlb option:selected").index();
+
+$(".xmlb_").hide();
+$("#xmlb_"+i).show();
+$("#xmlb_"+i).attr("name","xmlb2");
+
+
+
+});
+
+ $('.form_date').datetimepicker({
+            language:  'zh-CN',
+            weekStart: 1,
+            todayBtn:  1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            minView: 2,
+            forceParse: 0
+        });
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+<form method="post" action="{:url('keyan/xgwc1','id='.$id)}" enctype="multipart/form-data" >
+
+{foreach $dat as $d}
+<ul>
+<li>
+项目名称: <input name="xmmc" type="text" value="{$d.xmmc}">
+</li>
+</br>
+<li>
+编号 :<input name="bh" type="text" value="{$d.bh}">
+</li>
+</br>
+<li>
+项目列表:
+<select name="xmlb" id="xmlb">
+
+	<option value=""> ==请选择==</option>
+
+	<option value="国家级项目">国家级项目</option>
+    <option value="农业部项目">农业部项目</option>
+    <option value="教育部项目">教育部项目</option>
+    <option value="陕西省果业专项">陕西省果业专项</option>
+    <option value="陕西省农业专项">陕西省农业专项</option>
+    <option value="其他">其他</option>
+
+</select>
+</li>
+</br>
+
+<select class="xmlb_" id="xmlb_1" style="display:none">
+	<option value="国家973项目">国家973项目</option>
+    <option value="国家973课题">国家973课题</option>
+    <option value="国家973子课题">国家973子课题</option>
+    <option value="国家863课题">国家863课题</option>
+    <option value="国家863项目">国家863项目</option>
+    <option value="国家863子课题">国家863子课题</option>
+    <option value="国家科技重大专项">国家科技重大专项</option>
+    <option value="国家科技支撑计划">国家科技支撑计划</option>
+    <option value="国家自然科学基金面上项目">国家自然科学基金面上项目</option>
+    <option value="国家自然科学基金重点项目">国家自然科学基金重点项目</option>
+    <option value="国家自然科学基金重大项目">国家自然科学基金重大项目</option>
+    <option value="国家自然科学基金青年项目">国家自然科学基金青年项目</option>
+    <option value="国家优秀青年科学基金">国家优秀青年科学基金</option>
+    <option value="国家杰出青年科学基金">国家杰出青年科学基金</option>
+    <option value="科技基础性工作专项">科技基础性工作专项</option>
+    <option value="国际科技合作专项">国际科技合作专项</option>
+    <option value="国家重大工程任务">国家重大工程任务</option>
+    <option value="公益性行业科研专项">公益性行业科研专项</option>
+
+  </select>
+
+<select class="xmlb_" id="xmlb_2"  style="display: none;">
+                                <option value="农业部公益性行业专项">农业部公益性行业专项</option>
+                                <option value="农业部公益性行业专项子课题">农业部公益性行业专项子课题</option>
+                                <option value="农业部科教司资源环境处">农业部科教司资源环境处</option>
+                                <option value="农业部948项目">农业部948项目</option>
+                                <option value="农业部948项目协作">农业部948项目协作</option>
+                                <option value="农业部农业技术试验示范（品种测试）项目">农业部农业技术试验示范（品种测试）项目</option>
+                                <option value="农业部产业技术体系">农业部产业技术体系</option>
+                            </select>
+
+<select  class="xmlb_" id="xmlb_3" style="display: none;">
+                                <option value="教育部国家外专局111项目">教育部国家外专局111项目</option>
+                                <option value="教育部科学研究重大项目">教育部科学研究重大项目</option>
+                                <option value="教育部博士点基金">教育部博士点基金</option>
+                                <option value="教育部人才计划">教育部人才计划</option>
+                            </select>
+                            <select  class="xmlb_" id="xmlb_4" style="display: none;">
+                                <option value="陕西省创新重大专项">陕西省创新重大专项</option>
+                                <option value="陕西省科技统筹">陕西省科技统筹</option>
+                                <option value="陕西省重点科技创新团队">陕西省重点科技创新团队</option>
+                                <option value="陕西省科技攻关（农业）">陕西省科技攻关（农业）</option>
+                                <option value="陕西省科技统筹创新工程">陕西省科技统筹创新工程</option>
+                                <option value="陕西省果业专项资金">陕西省果业专项资金</option>
+                                <option value="陕西省果业发展专项">陕西省果业发展专项</option>
+                            </select>
+                            <select  class="xmlb_" id="xmlb_5" style="display: none;">
+                                <option value="陕西省农业专项">陕西省农业专项</option>
+                                <option value="农业科技推广及示范项目">农业科技推广及示范项目</option>
+                                <option value="农业部农产品区试费">农业部农产品区试费</option>
+                                <option value="农业科技推广及示范项目">农业科技推广及示范项目</option>
+                                <option value="陕西省科技新星">陕西省科技新星</option>
+                            </select>
+<li>
+<input type="text"  class="xmlb_" id="xmlb_6" placeholder="请填写未列出项目" style="display: none">
+</li>
+</br>
+                           
+
+                        <div class="form-group">
+                            <label for="bz">备注</label>
+                            <input type="text" name="bz" class="" id="bz" value="{$d.bz}" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="fzr">负责人</label>
+                            <input type="text" name="fzr" class="" id="fzr" value="{$d.fzr}" placeholder="" required>
+                        </div>
+<div class="form-group">
+                            <label for="dtp_input" class="control-label">开始日期</label>
+                            <div class="input-group date form_date col-md-5" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input" data-link-format="yyyy-mm-dd">
+                                <input class="form-control" size="16" type="text" value="" readonly>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                            </div>
+                            <input name="sdate" type="hidden" id="dtp_input" value="" /><br/>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dtp_input2" class="control-label">结束日期</label>
+                            <div class="input-group date form_date col-md-5" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                <input name="edate" class="form-control" size="16" type="text" value="" readonly>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                            </div>
+                            <input name="edate" type="hidden" id="dtp_input2" value="" /><br/>
+                        </div>
+                      
+
+                        <div class="form-group">
+                            <label for="htjf">合同经费（万元）</label>
+                            <input type="number" name="htjf" class="" value="{$d.htjf}" id="htjf" placeholder="" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sjdwjf">实际到位经费（万元）</label>
+                            <input type="number" name="sjdwjf" class="" value="{$d.sjdwjf}" id="sjdwjf" placeholder="" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lb">类别</label>
+                            <select name="lb" id="lb" class="">
+                                 <option>==请选择==</option>
+                                <option value="国家级">国家级</option>
+                                <option value="省部级">省部级</option>
+                                <option value="其他">其他</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="pfwj">批复文件</label>
+                            <input type="file" name="pfwj" class="" id="pfwj" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="rws">任务书</label>
+                            <input type="file" name="rws" class="" id="rws" placeholder="">
+                        </div>
+
+                          </ul>
+
+{/foreach}
+<button type="submit"  class="btn btn-primary form-control"> 提交</button>
+</form>
+
+{include file="../application/kygl/view/index/footer.html" /}

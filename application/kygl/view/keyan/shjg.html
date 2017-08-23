@@ -1,0 +1,62 @@
+{include file="../application/kygl/view/index/header.html" /}
+<script type="text/javascript">
+$(document).ready(function(){
+ /*$("#st").change(function(){
+               var i=$("#st option:selected").index();
+               if( var i==2){
+               	$("#yuanyin").show();}
+         
+               //$("#xmlb_"+i).show();
+               //$("#xmlb_"+i).attr('name','xmlb2');
+});*/
+
+ /*$("select[name=status]").bind("change",function(){
+ if($(this).val()=='3'){
+         $("#a").show();
+
+}
+
+else{ $("#a").hide();}
+});*/
+
+//jqeuery 联动
+$("#st").change(function(){
+//$("select[name=status]").bind("change",function(){
+ if($(this).val()=='3'){
+          //$("#b").show();
+         $("#a").show();
+         $("#a").val.show();
+
+}
+
+else{ $("#a").hide();}
+});
+
+});
+</script>
+<form method="post"  action="{:url('keyan/xiugaistatus','form='.$xiangmu.id)}">
+<p><input type="hidden" name="id" value="{$data.id}"></input></p>
+  
+  (请选择数字,选择1代表正在审核中,2代表通过,3代表未通过)
+  <p>
+<div class="sta">
+  <label for="st">请选择数字</label>
+<select name="status" id="st">
+     <option value="1">1</option>
+     <option value="2">2</option>
+     <option value="3">3</option>
+</select>
+
+</div>
+</p>
+
+<div>
+<input type="text" name="yuanyin" id="a" class="xianshi" style="display:none"; placeholder="请填写未通过原因" > 
+</div>
+       
+       <input type="submit" value="点击提交" ><option>
+
+
+
+</form>
+ {include file="../application/kygl/view/index/footer.html" /}

@@ -1,0 +1,21 @@
+<table>
+                        <tr>
+                            <th width="500">项目</th>
+                            <th><span class="label label-success">通过</span></th>
+                            <th><span class="label label-default">待审</span></th>
+                            <th><span class="label label-danger">未通过</span></th>
+                        </tr>
+                        {foreach $xiangmus as $d}
+                        <tr>
+                       
+                            <td>{$d.id}、{$d.title}</td>
+                            <td><span class="badge">{$d.f2}</span></td>
+                            <td><span class="badge">{$d.f1}</span></td>
+                            <td><span class="badge">{$d.f3}</span></td>
+                            
+                        </tr>
+                        {/foreach}
+                   </table>
+
+
+

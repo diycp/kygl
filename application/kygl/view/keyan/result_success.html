@@ -1,0 +1,39 @@
+{include file="../application/kygl/view/index/header.html" /}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2 sidebar" >
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">我的菜单</h3>
+                </div>
+
+                <div class="panel-body">
+                    {if $Think.session.usergroup == 1}
+                    {include file="../application/kygl/view/index/menu2.html"}
+                    {else}
+                    {include file="../application/kygl/view/index/menu.html"}
+                    {/if}
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col-sm-10 main">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">在线申报</h3>
+                </div>
+                <div class="panel-body">
+
+                    <div class="list-group">
+                        <div class="alert alert-success" role="alert"><span class="glyphicon glyphicon-hand-right"></span> {$msg}</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{include file="../application/kygl/view/index/footer.html" /}
